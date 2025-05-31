@@ -100,4 +100,3 @@ This project is released under the [MIT License](LICENSE).
 ## Author
 
 Developed by **Jashan Kaeley**  
-Submitted for course credit as part of [Course Name / Institution, if needed]
