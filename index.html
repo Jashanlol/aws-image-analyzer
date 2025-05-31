@@ -91,14 +91,20 @@
       fileInput.addEventListener('change', () => {
         const file = fileInput.files[0];
         if (file) {
+          // Reset state
+          lastUploadedKey = null;
+          status.textContent = "";
+          labelsList.innerHTML = "";
+          results.classList.add("hidden");
+          progressBar.style.width = '0%';
+          progressContainer.classList.add("hidden");
+
           const reader = new FileReader();
           reader.onload = (e) => {
             imagePreview.src = e.target.result;
             previewContainer.classList.remove('hidden');
           };
           reader.readAsDataURL(file);
-          results.classList.add("hidden");
-          labelsList.innerHTML = "";
         }
       });
 
